@@ -643,8 +643,10 @@ img { max-width: 100%; display: block; }
   inset: 0;
   background: rgba(13,13,20,0.65);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -664,6 +666,14 @@ img { max-width: 100%; display: block; }
   transition: background var(--transition);
 }
 .preview-btn:hover { background: var(--primary-d); }
+.preview-btn-code {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: var(--white);
+}
+.preview-btn-code:hover {
+  background: rgba(255,255,255,0.1);
+}
 
 /* Card body */
 .project-body {
