@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Saber | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Ahmed Saber</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Ahmed Saber</h1>
+      <div class="hero-roles">
+        <span class="role-text" id="role-text"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        A passionate full-stack developer who loves building clean, performant,
+        and user-friendly web applications from front to back.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/aaasssaz118creator" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/201006287044" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:aaasssaz118@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <img src="image/1.jpeg" alt="Ahmed Saber" class="avatar-photo" />
+        </div>
+      </div>
+      <div class="floating-badge badge-1"><i class="fab fa-python"></i> Python</div>
+      <div class="floating-badge badge-2"><i class="fab fa-node-js"></i> Node.js</div>
+      <div class="floating-badge badge-3"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="floating-badge badge-4"><i class="fab fa-html5"></i> HTML/CSS</div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon"><i class="fas fa-code"></i></div>
+          <h3>Developer</h3>
+          <p>I write clean, maintainable code across the full stack — from pixel-perfect UIs to robust server-side APIs.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend Engineer</h3>
+          <p>I build scalable REST APIs and server-side applications using Node.js and Python with a focus on performance.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>UI Craftsman</h3>
+          <p>I care deeply about user experience and translate designs into responsive, accessible web interfaces.</p>
+        </div>
+      </div>
+      <div class="about-text">
+        <p>
+          I'm <strong>Ahmed Saber</strong>, a full-stack web developer with hands-on experience in
+          <strong>HTML, CSS, JavaScript, Python,</strong> and <strong>Node.js</strong>.
+          I enjoy turning complex problems into simple, beautiful, and intuitive solutions.
+          Whether it's a dynamic front-end experience or a powerful back-end system, I bring
+          dedication and craftsmanship to every project I work on.
+        </p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num" data-target="20">0</span><span class="stat-label">Projects</span></div>
+          <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Technologies</span></div>
+          <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-label">% Dedication</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My Skills</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card" data-aos>
+          <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+          <h3>HTML5</h3>
+          <p>Semantic markup, accessibility, SEO-friendly structure.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+          <span class="skill-percent">95%</span>
+        </div>
+
+        <div class="skill-card" data-aos>
+          <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+          <h3>CSS3</h3>
+          <p>Flexbox, Grid, animations, responsive design, custom properties.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          <span class="skill-percent">90%</span>
+        </div>
+
+        <div class="skill-card" data-aos>
+          <div class="skill-icon js"><i class="fab fa-js"></i></div>
+          <h3>JavaScript</h3>
+          <p>ES6+, DOM manipulation, async/await, REST APIs, modern patterns.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          <span class="skill-percent">88%</span>
+        </div>
+
+        <div class="skill-card" data-aos>
+          <div class="skill-icon python"><i class="fab fa-python"></i></div>
+          <h3>Python</h3>
+          <p>Scripting, automation, Flask/Django, data processing.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          <span class="skill-percent">85%</span>
+        </div>
+
+        <div class="skill-card" data-aos>
+          <div class="skill-icon node"><i class="fab fa-node-js"></i></div>
+          <h3>Node.js</h3>
+          <p>Express.js, REST APIs, middleware, authentication, databases.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          <span class="skill-percent">82%</span>
+        </div>
+
+        <div class="skill-card" data-aos>
+          <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+          <h3>Git & Tools</h3>
+          <p>Version control, GitHub, VS Code, terminal workflows.</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          <span class="skill-percent">80%</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="project-preview">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Food Lover Restaurant Menu" />
+            <div class="project-preview-overlay">
+              <a href="https://aaasssaz118-creator.github.io/First-project/" target="_blank" rel="noopener noreferrer" class="preview-btn"><i class="fas fa-eye"></i> Live Demo</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Food Lover Restaurant Menu</h3>
+              <div class="project-links">
+                <a href="https://aaasssaz118-creator.github.io/First-project/" target="_blank" rel="noopener noreferrer" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <p class="project-author">Ahmed Saber</p>
+            <div class="project-tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap 5</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-preview">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80" alt="WEXy" />
+            <div class="project-preview-overlay">
+              <a href="https://eng-zooz.github.io/WEXy" target="_blank" rel="noopener noreferrer" class="preview-btn"><i class="fas fa-eye"></i> Live Demo</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>WEXy</h3>
+              <div class="project-links">
+                <a href="https://eng-zooz.github.io/WEXy" target="_blank" rel="noopener noreferrer" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <p class="project-author">Ahmed Saber</p>
+            <div class="project-tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Tailwind CSS</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-preview">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="FURNI" />
+            <div class="project-preview-overlay">
+              <a href="https://eng-zooz.github.io/Furni" target="_blank" rel="noopener noreferrer" class="preview-btn"><i class="fas fa-eye"></i> Live Demo</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>FURNI</h3>
+              <div class="project-links">
+                <a href="https://eng-zooz.github.io/Furni" target="_blank" rel="noopener noreferrer" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <p class="project-author">Ahmed Saber</p>
+            <div class="project-tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap 5</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-preview">
+            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=800&q=80" alt="BIG COLA" />
+            <div class="project-preview-overlay">
+              <a href="https://eng-zooz.github.io/Big_Cola" target="_blank" rel="noopener noreferrer" class="preview-btn"><i class="fas fa-eye"></i> Live Demo</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>BIG COLA</h3>
+              <div class="project-links">
+                <a href="https://eng-zooz.github.io/Big_Cola" target="_blank" rel="noopener noreferrer" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <p class="project-author">Ahmed Saber</p>
+            <div class="project-tags">
+              <span>HTML5</span><span>CSS3</span><span>Bootstrap 5</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Talk</span>
+        <h2 class="section-title">Get In Touch</h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <p class="contact-intro">
+            Have a project in mind or just want to say hi? My inbox is always open.
+            I'll get back to you as soon as possible!
+          </p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-item-label">Email</span>
+                <a href="mailto:aaasssaz118@gmail.com">aaasssaz118@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="contact-item-label">GitHub</span>
+                <a href="https://github.com/aaasssaz118creator" target="_blank" rel="noopener noreferrer">github.com/aaasssaz118creator</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <span class="contact-item-label">WhatsApp</span>
+                <a href="https://wa.me/201006287044" target="_blank" rel="noopener noreferrer">+20 100 628 7044</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+          </button>
+          <p class="form-success" id="form-success">Message sent! I'll get back to you soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & Built by <strong>Ahmed Saber</strong></p>
+      <p class="footer-copy">&copy; <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
