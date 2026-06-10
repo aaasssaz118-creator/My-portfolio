@@ -169,7 +169,9 @@ form.addEventListener('submit', (e) => {
     from_name:  name,
     from_email: email,
     message:    message,
-    to_email:   'aaasssaz118@gmail.com',
+    name:       name,
+    email:      email,
+    title:      'Portfolio Contact',
   })
   .then(() => {
     form.reset();
