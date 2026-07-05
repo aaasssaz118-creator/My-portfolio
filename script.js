@@ -144,7 +144,13 @@ const EMAILJS_PUBLIC_KEY  = '14YJB5db0RLtlNugR';
 const EMAILJS_SERVICE_ID  = 'service_usefoig';
 const EMAILJS_TEMPLATE_ID = 'template_8qstpgq';
 
-emailjs.init(EMAILJS_PUBLIC_KEY);
+let emailjsReady = false;
+if (typeof emailjs !== 'undefined') {
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+  emailjsReady = true;
+} else {
+  console.warn('EmailJS library not loaded. Check your internet or the CDN link.');
+}
 
 /* ===========================
    CONTACT FORM
@@ -161,7 +167,32 @@ form.addEventListener('submit', (e) => {
 
   if (!name || !email || !message) return;
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    formSuccess.textContent = '❌ Please enter a valid email address.';
+    formSuccess.style.color = '#f87171';
+    formSuccess.classList.add('show');
+    setTimeout(() => {
+      formSuccess.classList.remove('show');
+      formSuccess.style.color = '';
+    }, 5000);
+    return;
+  }
+
   const btn = form.querySelector('button[type="submit"]');
+
+  if (!emailjsReady) {
+    btn.disabled = false;
+    formSuccess.textContent = '❌ Email service not loaded. Check your connection.';
+    formSuccess.style.color = '#f87171';
+    formSuccess.classList.add('show');
+    setTimeout(() => {
+      formSuccess.classList.remove('show');
+      formSuccess.style.color = '';
+    }, 5000);
+    return;
+  }
+
   btn.disabled = true;
   btn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
 
@@ -178,6 +209,7 @@ form.addEventListener('submit', (e) => {
     btn.disabled = false;
     btn.innerHTML = '<span>Send Message</span> <i class="fas fa-paper-plane"></i>';
     formSuccess.textContent = '✅ Message sent! I\'ll get back to you soon.';
+    formSuccess.style.color = '';
     formSuccess.classList.add('show');
     setTimeout(() => formSuccess.classList.remove('show'), 5000);
   })
@@ -185,13 +217,14 @@ form.addEventListener('submit', (e) => {
     console.error('EmailJS error:', err);
     btn.disabled = false;
     btn.innerHTML = '<span>Send Message</span> <i class="fas fa-paper-plane"></i>';
-    formSuccess.textContent = '❌ Something went wrong. Please try again.';
+    const errorMsg = err?.text || err?.message || 'Something went wrong. Please try again.';
+    formSuccess.textContent = '❌ ' + errorMsg;
     formSuccess.style.color = '#f87171';
     formSuccess.classList.add('show');
     setTimeout(() => {
       formSuccess.classList.remove('show');
       formSuccess.style.color = '';
-    }, 5000);
+    }, 8000);
   });
 });
 
